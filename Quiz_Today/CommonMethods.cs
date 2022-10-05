@@ -245,9 +245,21 @@ namespace Quiz_Today
             SelectElement drop = new SelectElement(commonDriver.FindElement(locator));
             drop.SelectByValue(a);
         }
-        
 
-        
+
+        //Scroll Down
+        public void scrollToElement(By locator)
+        {
+
+
+            IWebElement state = WaitForELement(locator);
+            IJavaScriptExecutor commonExecuter = (IJavaScriptExecutor)commonDriver;
+            commonExecuter.ExecuteScript("arguments[0].scrollIntoView(true); ", state);
+
+
+        }
+
+
     }
 
 

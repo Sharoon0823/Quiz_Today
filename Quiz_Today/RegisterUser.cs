@@ -46,6 +46,7 @@ namespace Quiz_Today
         #region Constructor
         public RegisterUser(IWebDriver driver)
         {
+            log.Info("Constructor");
             commonDriver = driver;
         }
         #endregion
@@ -60,7 +61,7 @@ namespace Quiz_Today
 
      
 
-  
+       
 
 
         #region Click on  Name Field
@@ -75,6 +76,7 @@ namespace Quiz_Today
         #region Enter Name 
         public void Enter_Name(String Setname)
         {
+            log.Info("Name is set");
             setText(Click_Name, Setname);
         }
         #endregion
@@ -82,6 +84,7 @@ namespace Quiz_Today
         #region For CLick on Email Field
         public void Click_Email()
         {
+            log.Info("Click on email");
             CLick(Email);
         }
         #endregion
@@ -90,6 +93,7 @@ namespace Quiz_Today
         #region Enter Email
         public void Enter_Email(string mail)
         {
+            log.Info("Email ENtered");
             setText(Email, mail);
         }
         #endregion
@@ -97,6 +101,7 @@ namespace Quiz_Today
         #region CLick on Submit Button
         public void Click_Submitt()
         {
+            log.Info("Click on submit and title");
             CLick(CLick_Submit);
             CLick(title);
         }
@@ -105,6 +110,7 @@ namespace Quiz_Today
         #region Click and enter password
         public void ForPassword(string p)
         {
+            log.Info("Click and Set password");
             CLick(Password);
             setText(Password, p);
             
@@ -116,12 +122,17 @@ namespace Quiz_Today
         #region For Click on Date
         public void CLick_date()
         {
-            
-           // Thread.Sleep(2000);
+
+            // Thread.Sleep(2000);
+            log.Info("date Set");
             dropDown(Date, "23");
+            log.Info("Month set");
             dropDown(Month, "1");
+            log.Info("year set");
             dropDown(year, "2000");
+            log.Info("Check newsletter");
             CLick(SignUp_newsletter);
+            log.Info("Check Special Offer");
             CLick(Special_offer);
         }
         #endregion
@@ -129,27 +140,49 @@ namespace Quiz_Today
         #region CLick and ENter First Name
          public void Click_First_Lastname(string a , string b , string c , string add , string addd , string statee , string cityy , string zp, string mb)
         {
+            log.Info("Click on First name");
             CLick(FirstName);
+            log.Info("set text for First name");
             setText(FirstName, a);
+            log.Info("Click on last name");
             CLick(LastName);
+            log.Info("set text for last name");
             setText(LastName, b);
+            log.Info("Click on Company name");
             CLick(Company_Name);
+            log.Info("Set text for Company name");
             setText(Company_Name, c);
+            log.Info("Click on Address 01");
             CLick(address01);
+            log.Info("Set text for address 01 ");
             setText(address01, add);
+            log.Info("Click on Address 02");
             CLick(address02);
+            log.Info("Set text for address 02 ");
             setText(address02, addd);
+            log.Info("Set text for Country");
             dropDown(country, "Singapore");
+            log.Info("Click on State");
             CLick(state);
+            log.Info("Set text for State");
             setText(state, statee);
+            log.Info("Click on City ");
             CLick(city);
+            log.Info("Set text for City");
             setText(city, cityy);
+            log.Info("Click on ZipCode ");
             CLick(zipcode);
+            log.Info("Set text for Zipcode ");
             setText(zipcode, zp);
+            log.Info("CLick on Mobile Number");
             CLick(mobile_number);
+            log.Info("Set text for Mobile Number ");
             setText(mobile_number, mb);
+            log.Info("Click on submut");
             CLick(SUbmit);
+            log.Info(" Click on continue");
             CLick(Continue);
+            log.Info("Element is Visible");
             IsElementVisible(Name_visible);
 
         }
