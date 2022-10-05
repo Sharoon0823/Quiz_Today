@@ -55,6 +55,12 @@ namespace Quiz_Today
         By placeO = By.XPath("//a[@class='btn btn-default check_out']");
         By cardName = By.XPath("//*[@id=\"payment-form\"]/div[1]/div/input");
         By cardNum = By.XPath("//input[@name='card_number']");
+        By CVC = By.XPath("//*[@id=\"payment-form\"]/div[3]/div[1]/input");
+        By Expiration_mnth = By.XPath("//*[@id=\"payment-form\"]/div[3]/div[2]/input");
+        By Expiration_year = By.XPath("//*[@id=\"payment-form\"]/div[3]/div[3]/input");
+        By PayConfirm = By.XPath("//button[@class='form-control btn btn-primary submit-button']");
+        By OConfirmed = By.XPath("//*[@id=\"form\"]/div/div/div/p");
+
 
 
 
@@ -181,7 +187,7 @@ public void CLick_date()
 #endregion
 
 #region CLick and ENter First Name
- public void Click_First_Lastname(string a , string b , string c , string add , string addd , string statee , string cityy , string zp, string mb , string cmnt , string Ncard , string cn)
+ public void Click_First_Lastname(string a , string b , string c , string add , string addd , string statee , string cityy , string zp, string mb , string cmnt , string Ncard , string cn , string cvc , string mnth , string year)
 {
     log.Info("Click on First name");
     CLick(FirstName);
@@ -238,8 +244,16 @@ public void CLick_date()
             setText(cardName, Ncard);
             CLick(cardNum);
             setText(cardNum, cn);
+            CLick(CVC);
+            setText(CVC, cvc);
+            CLick(Expiration_mnth);
+            setText(Expiration_mnth, mnth);
+            CLick(Expiration_year);
+            setText(Expiration_year, year);
+            CLick(PayConfirm);
+            IsElementVisible(OConfirmed);
 
-}
+        }
 
 #endregion 
 

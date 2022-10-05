@@ -75,11 +75,11 @@ namespace Quiz_Today
                ru.Click_Namee();
                ru.Enter_Name("Sharooon");
                ru.Click_Email();
-               ru.Enter_Email("SharoonKhaliq8688frisrd48d648887779@gmail.com");
+               ru.Enter_Email("SharoonKhaliq8688fvrgsissddrd48d64cdf8887779@gmail.com");
                ru.Click_Submitt();
                ru.ForPassword("S090008900");
                ru.CLick_date();
-               ru.Click_First_Lastname(fname, lastname, "Lahore", "Lahore", "Isb", "IDK", "Lahore", "1234", "03057633796", "Place my order" , "Sharooncard", "090012900"); 
+               ru.Click_First_Lastname(fname, lastname, "Lahore", "Lahore", "Isb", "IDK", "Lahore", "1234", "03057633796", "Place my order" , "Sharooncard", "090012900", "1214" , "12" , "2022"); 
 
                  
 

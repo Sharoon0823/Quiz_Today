@@ -41,7 +41,7 @@ namespace Quiz_Today
         By SUbmit = By.XPath("//*[@id=\"form\"]/div/div/div/div[1]/form/button");
         By Continue = By.XPath("//*[@id=\'form\']/div/div/div/div/a");
         By Name_visible = By.XPath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[10]/a/b");
-
+        
 
         #region Constructor
         public RegisterUser(IWebDriver driver)
