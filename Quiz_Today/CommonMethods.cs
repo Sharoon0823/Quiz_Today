@@ -96,21 +96,24 @@ namespace Quiz_Today
             commonDriver.Close();
         }
 
+        #region For Sleep
         public static void ForSleep()
         {
             Thread.Sleep(5000);
 
         }
+        #endregion
 
-        //For URL
+        #region For URL
 
         public void FOrUrl(string url)
         {
             commonDriver.Url = url;
         }
+        #endregion
 
 
-
+        #region Find elements by Value , InnerHTML
         public string getElementText(By Locator)
         {
             string text;
@@ -133,7 +136,7 @@ namespace Quiz_Today
         }
 
 
-        //GetElement STate
+#region GetElement STate
         public string getElementState(By by)
         {
             string elementState = commonDriver.FindElement(by).GetAttribute("Disabled");
@@ -148,9 +151,10 @@ namespace Quiz_Today
             return elementState;
 
         }
+        #endregion
 
 
-        //ExecuteJavaScriptCode
+        #region ExecuteJavaScriptCode
         public static string ExecuteJavaScriptCode(string javascriptCode)
         {
             string value = null;
@@ -165,11 +169,11 @@ namespace Quiz_Today
             }
             return value;
         }
+        #endregion
 
 
 
-
-        //Wait for Element
+        #region Wait for Element
         private IWebElement WaitForELement(By by, int timeToReadyElement = 0)
         {
             IWebElement element = null;
@@ -190,27 +194,29 @@ namespace Quiz_Today
             }
             return element;
         }
+        #endregion
 
-        //Element Visible
+        #region Element Visible
         public bool IsElementVisible(By by)
         {
             return (findElement(by).Displayed || findElement(by).Enabled) ? true : false;
 
         }
+        #endregion
 
 
-        //IS PAge Ready
+        #region IS PAge Ready
         private bool IsPageReady(IWebDriver driver)
         {
             return ExecuteJavaScriptCode("return document.readyState").Equals("complete");
         }
+        #endregion
+        //private void PlaybackWait(int v)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        private void PlaybackWait(int v)
-        {
-            throw new NotImplementedException();
-        }
-
-        //Element Present
+        #region Element Present
         private bool IsElementPresent(By by)
         {
             try
@@ -223,9 +229,9 @@ namespace Quiz_Today
                 return false;
             }
         }
+        #endregion
 
-
-        //Clickable
+        #region Clickable
         private bool IsClickable(By by)
         {
             try
@@ -238,16 +244,18 @@ namespace Quiz_Today
             }
 
         }
+        #endregion
 
-        //For DropDown ELement
+        #region For DropDown ELement
         public void dropDown(By locator , string a)
         {
             SelectElement drop = new SelectElement(commonDriver.FindElement(locator));
             drop.SelectByValue(a);
         }
+        #endregion
 
 
-        //Scroll Down
+        #region Scroll Down
         public void scrollToElement(By locator)
         {
 
@@ -258,7 +266,7 @@ namespace Quiz_Today
 
 
         }
-
+        #endregion
 
     }
 
