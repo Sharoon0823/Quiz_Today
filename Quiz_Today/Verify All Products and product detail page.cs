@@ -54,6 +54,10 @@ namespace Quiz_Today
             IsElementVisible(availability);
             Console.WriteLine("Availabilty visible");
 
+            //For Screenshot
+            ((ITakesScreenshot)commonDriver).GetScreenshot().SaveAsFile("VerifyAllProduct.png");
+
+
             commonDriver.Close();
 
         }

@@ -255,6 +255,9 @@ public void CLick_date()
             CLick(PayConfirm);
             IsElementVisible(OConfirmed);
 
+            //ForScreenshot
+            ((ITakesScreenshot)commonDriver).GetScreenshot().SaveAsFile("PlaceOrder.png");
+
         }
 
         

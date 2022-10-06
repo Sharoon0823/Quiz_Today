@@ -63,6 +63,10 @@ namespace Quiz_Today
             Console.WriteLine("Product o1 is Visible");
             IsElementVisible(visible02);
             Console.Write("Product 02 is Visible");
+
+            //For Screenshot
+            ((ITakesScreenshot)commonDriver).GetScreenshot().SaveAsFile("AddProduct.png");
+
             commonDriver.Close();
 
         }

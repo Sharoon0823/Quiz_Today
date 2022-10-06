@@ -100,10 +100,17 @@ log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().Dec
                     Console.WriteLine(file);
                      Assert.IsTrue(file.Contains("invoice (1)"));
 
+
+
                 }
 
+
+
             }
-          
+
+            //ForScreenshot
+            ((ITakesScreenshot)commonDriver).GetScreenshot().SaveAsFile("PurchaseInvoice.png");
+
         }
         #endregion
 

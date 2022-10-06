@@ -38,6 +38,9 @@ namespace Quiz_Today
             IsElementVisible(SearchProductt);
             Console.WriteLine("Visible");
 
+            //For Screenshot
+            ((ITakesScreenshot)commonDriver).GetScreenshot().SaveAsFile("SearchProduct.png");
+
            
         }
         #endregion

@@ -185,6 +185,9 @@ namespace Quiz_Today
             log.Info("Element is Visible");
             IsElementVisible(Name_visible);
 
+            //For Screenshot
+            ((ITakesScreenshot)commonDriver).GetScreenshot().SaveAsFile("RegisterUser.png");
+
         }
 
         #endregion
