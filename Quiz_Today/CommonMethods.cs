@@ -16,6 +16,7 @@ namespace Quiz_Today
         public static IWebDriver commonDriver;
         Actions Action;
 
+        #region For Drivers
         public static IWebDriver driver(string driver)
         {
             if (driver == "Chrome")
@@ -28,23 +29,25 @@ namespace Quiz_Today
             }
             return commonDriver;
         }
+        #endregion
 
 
-        //For Assertion
+        #region For Assertion
 
         public void Assertion(String Actual , string Expected)
         {
             Assertion(Actual, Expected);
         }
+        #endregion
 
-        //
+        #region Log4net
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
+        #endregion
 
         // frequent_methods
 
 
-        //Find Element
+        #region Find Element
 
         public IWebElement findElement(By Locate)
         {
@@ -52,13 +55,15 @@ namespace Quiz_Today
 
         }
 
+        #endregion
 
 
 
-        //RemoveText
 
 
-        //SendTextInput Field
+
+
+        #region SendTextInput Field
 
         public void setText(By locate, string text)
         {
@@ -68,8 +73,9 @@ namespace Quiz_Today
             findedElement.SendKeys(text + Keys.Tab);
 
         }
+        #endregion
 
-        //Click on the Element
+        #region Click on the Element
 
         public void CLick(By locator)
         {
@@ -77,9 +83,10 @@ namespace Quiz_Today
             Action.Click(findElement(locator)).Build().Perform();
 
         }
+        #endregion
 
 
-        //Reomove Text
+        #region Reomove Text
         public void removeText(IWebElement element)
         {
             int a = element.Text.Length;
@@ -89,12 +96,14 @@ namespace Quiz_Today
                 element.SendKeys(Keys.Backspace);
             }
         }
+        #endregion
 
-
+        #region For CLose
         public static void ForClose()
         {
             commonDriver.Close();
         }
+        #endregion
 
         #region For Sleep
         public static void ForSleep()
@@ -273,3 +282,4 @@ namespace Quiz_Today
 
 }
 
+#endregion
