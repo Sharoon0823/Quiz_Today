@@ -70,6 +70,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterUser.cs" />
     <Compile Include="PlaceOrder.cs" />
+    <Compile Include="SearchProduct.cs" />
     <Compile Include="Verify All Products and product detail page.cs" />
   </ItemGroup>
   <ItemGroup>

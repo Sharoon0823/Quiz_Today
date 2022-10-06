@@ -42,7 +42,7 @@ namespace Quiz_Today
             ru.Click_Namee();
             ru.Enter_Name("Sharoon");
             ru.Click_Email();
-            ru.Enter_Email("SharoonKhaliq888896877fdfsdf74@gmail.com");
+            ru.Enter_Email("SharoonKhalirq488d8896877fdfsdf74@gmail.com");
             ru.Click_Submitt();
             ru.ForPassword("S090008900");
             ru.CLick_date();
@@ -75,7 +75,7 @@ namespace Quiz_Today
             ru.Click_Namee();
             ru.Enter_Name("Sharooon");
             ru.Click_Email();
-            ru.Enter_Email("SharoonKhaliq8688fvrcgsissddrd48d64cdf8887779@gmail.com");
+            ru.Enter_Email("SharoonKhaliq8688fvddrcgsissddrd48d64cdf8887779@gmail.com");
             ru.Click_Submitt();
             ru.ForPassword("S090008900");
             ru.CLick_date();
@@ -144,5 +144,20 @@ namespace Quiz_Today
             po.Call02(fname, lastname, "Lahore", "Lahore", "Isb", "IDK", "Lahore", "1234", "03057633796", "Place my order", "Sharooncard", "090012900", "1214", "12", "2022");
         }
 
+        [TestMethod]
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", "RegData.XML", "Loginwithvalid", DataAccessMethod.Sequential)]
+        public void ProductSearch()
+        {
+            string fname = TestContext.DataRow["name"].ToString();
+            string lastname = TestContext.DataRow["lastname"].ToString();
+
+            IWebDriver aDriver = Common_Method.driver("Chrome");
+            aDriver.Manage().Window.Maximize();
+            // aDriver.Url = "https://automationexercise.com/test_cases";
+            aDriver.Navigate().GoToUrl(URL1);
+
+            SearchProduct sp = new SearchProduct(aDriver);
+            sp.SearchFUn("Shirt");
         }
     }
+}
